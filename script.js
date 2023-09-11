@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initiateCall(event) {
         const phoneNumber = event.currentTarget.getAttribute('data-phone');
         if (phoneNumber) {
-            window.location.href = 'tel:' + phoneNumber;
+            window.location.href = '+91' + phoneNumber;
         }
     }
 
