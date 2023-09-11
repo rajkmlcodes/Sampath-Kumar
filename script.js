@@ -21,6 +21,32 @@ closeButton.addEventListener('click', () => {
 
 
 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const callButtons = document.querySelectorAll('.call-button');
+
+    // Function to initiate a phone call when the button is clicked
+    function initiateCall(event) {
+        const phoneNumber = event.currentTarget.getAttribute('data-phone');
+        if (phoneNumber) {
+            window.location.href = 'tel:' + phoneNumber;
+        }
+    }
+
+    // Add click event listeners to call buttons
+    callButtons.forEach(function (button) {
+        button.addEventListener('click', initiateCall);
+    });
+});
+
+
+
+
+
+
+
 // ----------------------------------------------------------------
 // JavaScript for banner slider or hero section banner slider
 // code for hero
