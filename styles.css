@@ -3,9 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red;    */
 }
 
+
+/* TOP NAVBAR OF THE PAGE -------------------------------------------------------------------------- */
 .top-nav {
     display: flex;
     justify-content: flex-start;
@@ -17,13 +18,8 @@
     height: 20px;
 }
 
-/* Styles for the hamburger menu button */
+/* Styling Hamburger Menu */
 .hamburger-menu {
-    /* position: fixed; */
-    /* top: 20px; */
-    /* left: 20px; */
-    cursor: pointer;
-    /* z-index: 0; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,11 +30,15 @@
     transition: all 0.25s ease;
 }
 
+
+/* adding hover effect to the Hamburger menu */
 .hamburger-menu:hover {
+    cursor: pointer;
     background: #f2f2f2;
     user-select: none;
 }
 
+/* menu bar */
 .bar {
     width: 20px;
     height: 3px;
@@ -47,12 +47,13 @@
     transition: 0.4s;
 }
 
+/* menu text */
 .menu-text {
     font-size: 24px;
     user-select: none;
 }
 
-/* Close button styles (Initially hidden) */
+/* styling close button */
 .close-button {
     display: none;
     position: absolute;
@@ -65,8 +66,7 @@
 }
 
 
-/* ----------------------------------------------------------------- */
-/* Stylish search bar */
+/* Styling Searchbar -------------------------------------------------------------------------- */
 .search-container {
     display: flex;
     align-items: center;
@@ -75,6 +75,7 @@
     height: 52px;
 }
 
+/* sttyling search bar input field */
 #search-input {
     width: 80%;
     height: 100%;
@@ -86,14 +87,12 @@
     font-size: 1rem;
 }
 
-
-
-/* Show close button when the sidebar is active */
+/* this styling will show close button when the sidebar is active */
 .active-sidebar .close-button {
     display: block;
 }
 
-/* Hide hamburger bars when close button is visible */
+/* hiding hamburger bars when close button is visible */
 .active-sidebar .hamburger-menu .bar {
     opacity: 0;
     pointer-events: none;
@@ -101,10 +100,7 @@
 
 
 
-/* ------------------------------------------------------------ */
-/* Banner Slider styles */
-/* HERO SECTION STYLING */
-
+/* HERO SECTION STYLING ----------------------------------------------------------------- */
 .sliderWrap {
     display: flex;
     justify-content: center;
@@ -113,7 +109,8 @@
     height: 500px;
     overflow: hidden;
 }
-  
+
+/* applying image properties for Hero Section or sliding images  */
 .sliderWrap img {
     width: 100%;
     height: auto;
@@ -122,8 +119,7 @@
 
 
 
-
-/* Styles for the sidebar menu */
+/* STYLING SIDEBAR MENU ------------------------------------------------------------ */
 .sidebar {
     position: fixed;
     left: -250px;
@@ -162,22 +158,14 @@
     text-decoration: none;
 }
 
-/* Content styling */
-.content {
-    margin-left: 0;
-    transition: 0.4s;
-}
 
-/* Active class for opening the sidebar */
+/* active class for opening the sidebar */
 .active-sidebar {
     left: 0;
 }
 
-.active-content {
-    margin-left: 250px;
-}
 
-
+/* styling call now button */
 .call-now {
     background: #6412e9;
     color: #fff;
@@ -195,6 +183,7 @@
         0px 42px 80px rgba(0, 0, 0, 0.05);
 }
 
+/* applying hover effect to call now button */
 .call-now:hover {
     cursor: pointer;
     box-shadow:
@@ -207,8 +196,7 @@
 
 
 
-/* --------------------------------------------- */
-/* Styles for the service section */
+/* STYLING SERVICES SECTION --------------------------------------------- */
 .services {
     display: flex;
     flex-direction: column;
@@ -218,13 +206,15 @@
     margin: 30px 0px;
     width: 100%;
     overflow: hidden;
-}
+}  
 
+/* service title */
 .service-title {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
+/* service card container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -236,7 +226,7 @@
     overflow: hidden;
 }
 
-/* Styles for service cards */
+/* styling service card */
 .service-card {
     max-width: 300px;
     min-height: 320px;
@@ -249,6 +239,7 @@
     transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
 }
 
+/* applying hover effect to the service card */
 .service-card:hover {
     cursor: pointer;
     transform: translateY(-20px);
@@ -262,26 +253,27 @@
         ;
 }
 
+/* applying properties to the service card image or logo */
 img[alt="service-logo"] {
     max-width: 100px;
     height: auto;
     margin-bottom: 10px;
 }
 
+/* service card name or title */
 .service-card h3 {
     font-size: 1.5rem;
     margin: 10px 0;
 }
 
+/* service card description */
 .service-card p {
     font-size: 1rem;
 }
 
 
 
-
-
-/* Stylish Testimonials Section --------------------------------------------------------------- */
+/* STYLING TESTIMONIALS SECTION --------------------------------------------------------------- */
 .testimonials {
     display: flex;
     flex-direction: column;
@@ -290,11 +282,13 @@ img[alt="service-logo"] {
     margin: 40px 20px;
 }
 
+/* testimonials title */
 .testimonial-title {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
+/* styling testimonials card */
 .testimonial-card {
     min-width: 300px;
     max-width: 320px;
@@ -309,11 +303,13 @@ img[alt="service-logo"] {
     transition: all 0.25s ease-in-out;
 }
 
+/* applying to the testimonials cards */
 .testimonial-card.active {
     display: block;
     opacity: 1;
 }
 
+/* applying hover effect to the testimonials cards */
 .testimonial-card:hover {
     cursor: pointer;
     transform: translateY(-15px);
@@ -327,6 +323,7 @@ img[alt="service-logo"] {
         ;
 }
 
+/* this is the card holder div which is holdeing all the testimonials cards */
 .card-holder {
     display: flex;
     flex-wrap: wrap;
@@ -336,6 +333,8 @@ img[alt="service-logo"] {
     margin: 20px 10px;
 }
 
+
+/* testimonials cards profile div */
 .testinomial-profile {
     display: flex;
     justify-content: center;
@@ -343,6 +342,7 @@ img[alt="service-logo"] {
     gap: 20px;
 }
 
+/* testimonials cards profile image div */
 .testmonial-img-div {
     display: flex;
     justify-content: center;
@@ -352,25 +352,21 @@ img[alt="service-logo"] {
     overflow: hidden;
     border-radius: 100%;
 }
-
+/* testimonials cards profile image or profile pic */
 img[alt="testimonial-logo"] {
     height: 100%;
 }
 
+/* testimonials cards description */
 .testimonial-card p {
     font-size: 1.2rem;
     margin-top: 30px;
 }
 
+/* testimonials cards profile name or user or customer's name */
 .testimonial-card h4 {
     font-size: 1.5rem;
 }
-
-/* Testimonial Slider Styling */
-
-
-
-
 
 
 /* NEWSLETTER STYLING --------------------------------------------- */
@@ -382,6 +378,7 @@ img[alt="testimonial-logo"] {
     margin: 10px 0px 70px 0px;
 }
 
+/* newsletter styling */
 .newsletter-container {
     display: flex;
     flex-wrap: wrap;
@@ -394,6 +391,7 @@ img[alt="testimonial-logo"] {
     border-radius: 10px;
 }
 
+/* newsletter div heading */
 .newsletter-text h3 {
     font-size: 24px;
     font-weight: 600;
@@ -401,11 +399,13 @@ img[alt="testimonial-logo"] {
     line-height: 1.1;
 }
 
+/* newsletter div sub heading */
 .newsletter-text p {
     font-size: 14px;
     color: #666;
 }
 
+/* newsletter div email box wrapper */
 .newsletter-email-box-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -426,11 +426,13 @@ img[alt="testimonial-logo"] {
         0px 55px 115px -8px rgba(0, 0, 0, 0.11);
 }
 
+/* newsletter envelope icon */
 .email-box .fa-envelope {
     font-size: 15px;
     color: #999;
 }
 
+/* newsletter - email box input styling */
 .email-box input {
     border: 0;
     padding: 5px;
@@ -439,11 +441,13 @@ img[alt="testimonial-logo"] {
     width: 250px;
 }
 
+/* applying focus properties on newsletter email box input */
 .email-box input:focus {
     cursor: text;
     outline: 0;
 }
 
+/* newsletter - email box submit button styling */
 .email-box-submit-btn {
     background: #6412e9;
     color: #fff;
@@ -454,6 +458,7 @@ img[alt="testimonial-logo"] {
     transition: 0.3s ease-in-out;
 }
 
+/* newsletter - email box submit button hover effect */
 .email-box-submit-btn:hover {
     cursor: pointer;
     background-color: #6412e9db;
@@ -463,8 +468,7 @@ img[alt="testimonial-logo"] {
 
 
 
-/* ---------------------------------------------------- */
-/* Stylish Address Section */
+/* STYLING ADDRESS SECTION OF THE PAGE ---------------------------------------------------- */
 .address {
     display: flex;
     flex-wrap: wrap;
@@ -475,10 +479,12 @@ img[alt="testimonial-logo"] {
     text-align: center;
 }
 
+/* address section title */
 .address h2 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
+
 
 .address p {
     font-size: 1.2rem;
@@ -486,24 +492,21 @@ img[alt="testimonial-logo"] {
 }
 
 
-
-
-
-
-/* ------------------------------------------------------------------------------------- */
-/* Stylish footer styles */
+/* STYLING FOOTER OF THE WEB PAGE------------------------------------------------------------------------------------- */
 .footer {
     background-color: #333;
     color: #fff;
     padding: 40px 0;
 }
 
+/* footer container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* footer content */
 .footer-content {
     display: flex;
     flex-wrap: wrap;
@@ -511,17 +514,20 @@ img[alt="testimonial-logo"] {
     align-items: center;
 }
 
+/* footer logo div */
 .footer-logo {
     flex: 1;
     max-width: 200px;
     text-align: center;
 }
 
+/* footer logo styling */
 .footer-logo img {
     max-width: 100%;
     height: auto;
 }
 
+/* footer company name or name below logo */
 .footer-logo h3 {
     margin-top: 10px;
 }
@@ -564,8 +570,10 @@ img[alt="testimonial-logo"] {
 
 
 
-/* Responsive styles for close button */
+/* RESPONSIVE STYLING FOR SMALL AND MEDIUM SCREEN SIZED DEVICES -------------------------------------------------------------------- */
 @media (max-width: 768px) {
+
+    /* HAMBURGER MENU STYLING */
     .close-button {
         font-size: 42px;
         top: 10px;
@@ -580,15 +588,15 @@ img[alt="testimonial-logo"] {
         font-size: 18px;
     }
 
-
-    .find-a-property {
+FI
+    /* STYLING CALL NOW BTN --------------------------------------------- */
+    .call-now {
         font-weight: 500;
         padding: 12px 30px;
     }
 
 
-
-    /* HERO SLIDER------------------------------------- */
+    /* HERO SLIDER ------------------------------------- */
     .hero-slider {
         width: 100%;
         overflow: hidden;
@@ -608,10 +616,7 @@ img[alt="testimonial-logo"] {
 
 
 
-
-
-
-
+    /* SERVICES --------------------------------------------- */
     .services {
         padding: 0 20px;
         margin: 0;
@@ -621,12 +626,6 @@ img[alt="testimonial-logo"] {
     .card-container {
         width: 100%;
     }
-
-
-
-
-
-
 
 
     /* NEWSLETTER --------------------------------------------- */
@@ -684,10 +683,7 @@ img[alt="testimonial-logo"] {
 
 
 
-
-
-
-
+    /* FOOTER STYLING --------------------------------------------- */
     .footer-content {
         flex-direction: column;
         justify-content: flex-start;

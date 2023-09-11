@@ -23,8 +23,7 @@ closeButton.addEventListener('click', () => {
 
 
 // ----------------------------------------------------------------
-// JavaScript for banner slider or hero section banner slider
-// code for hero
+// JavaScript code for banner slider or hero section banner slider
 const first = () => {
     document.getElementById("slide").src = "https://images.unsplash.com/photo-1572025442646-866d16c84a54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80";
 };
@@ -54,7 +53,7 @@ setInterval(fifth, 19000);
 
 
 // ------------------------------------------------------------------------
-// JavaScript for search functionality
+// JavaScriptc code for search functionality
 const searchInput = document.getElementById('search-input');
 const serviceCards = document.querySelectorAll('.service-card');
 
