@@ -24,22 +24,22 @@ closeButton.addEventListener('click', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const callButtons = document.querySelectorAll('.call-button');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const callButtons = document.querySelectorAll('.call-button');
 
-    // Function to initiate a phone call when the button is clicked
-    function initiateCall(event) {
-        const phoneNumber = event.currentTarget.getAttribute('data-phone');
-        if (phoneNumber) {
-            window.location.href = '+91' + phoneNumber;
-        }
-    }
+//     // Function to initiate a phone call when the button is clicked
+//     function initiateCall(event) {
+//         const phoneNumber = event.currentTarget.getAttribute('data-phone');
+//         if (phoneNumber) {
+//             window.location.href = '+91' + phoneNumber;
+//         }
+//     }
 
-    // Add click event listeners to call buttons
-    callButtons.forEach(function (button) {
-        button.addEventListener('click', initiateCall);
-    });
-});
+//     // Add click event listeners to call buttons
+//     callButtons.forEach(function (button) {
+//         button.addEventListener('click', initiateCall);
+//     });
+// });
 
 
 
