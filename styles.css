@@ -1,0 +1,676 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red;    */
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 300px;
+    max-width: 1000px;
+    gap: 10px;
+    margin: 40px 30px;
+    height: 20px;
+}
+
+/* Styles for the hamburger menu button */
+.hamburger-menu {
+    /* position: fixed; */
+    /* top: 20px; */
+    /* left: 20px; */
+    cursor: pointer;
+    /* z-index: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #f8f8f8;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+}
+
+.hamburger-menu:hover {
+    background: #f2f2f2;
+    user-select: none;
+}
+
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.menu-text {
+    font-size: 24px;
+    user-select: none;
+}
+
+/* Close button styles (Initially hidden) */
+.close-button {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #222;
+    z-index: 101;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* Stylish search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 52px;
+}
+
+#search-input {
+    width: 80%;
+    height: 100%;
+    padding: 12px 20px;
+    border: 0;
+    background: #f8f8f8;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+
+/* Show close button when the sidebar is active */
+.active-sidebar .close-button {
+    display: block;
+}
+
+/* Hide hamburger bars when close button is visible */
+.active-sidebar .hamburger-menu .bar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* Banner Slider styles */
+/* HERO SECTION STYLING */
+
+.sliderWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+  
+.sliderWrap img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+/* Styles for the sidebar menu */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    color: #222;
+    transition: 0.4s;
+    z-index: 100;
+    overflow-y: auto;
+    box-shadow:
+        0.5px 0px 2.2px rgba(0, 0, 0, 0.008),
+        1.3px 0px 5.3px rgba(0, 0, 0, 0.012),
+        2.4px 0px 10px rgba(0, 0, 0, 0.015),
+        4.2px 0px 17.9px rgba(0, 0, 0, 0.018),
+        7.9px 0px 33.4px rgba(0, 0, 0, 0.022),
+        19px 0px 80px rgba(0, 0, 0, 0.03)
+        ;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 45px 0 0 40px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul li {
+    padding: 12px 0;
+}
+
+.sidebar a {
+    color: #222;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/* Content styling */
+.content {
+    margin-left: 0;
+    transition: 0.4s;
+}
+
+/* Active class for opening the sidebar */
+.active-sidebar {
+    left: 0;
+}
+
+.active-content {
+    margin-left: 250px;
+}
+
+
+
+
+/* --------------------------------------------- */
+/* Styles for the service section */
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 30px 0px;
+    width: 100%;
+}
+
+.service-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 1200px;
+}
+
+/* Styles for service cards */
+.service-card {
+    max-width: 300px;
+    min-height: 320px;
+    max-height: auto;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
+}
+
+.service-card:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
+    box-shadow:
+        0px 1px 2.2px rgba(0, 0, 0, 0.011),
+        0px 2.5px 5.3px rgba(0, 0, 0, 0.016),
+        0px 4.6px 10px rgba(0, 0, 0, 0.02),
+        0px 8.3px 17.9px rgba(0, 0, 0, 0.024),
+        0px 15.5px 33.4px rgba(0, 0, 0, 0.029),
+        0px 37px 80px rgba(0, 0, 0, 0.035)
+        ;
+}
+
+img[alt="service-logo"] {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Stylish Testimonials Section --------------------------------------------------------------- */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 40px 20px;
+}
+
+.testimonial-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.testimonial-card {
+    min-width: 300px;
+    max-width: 320px;
+    min-height: 250px;
+    max-height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding: 30px;
+    transition: all 0.25s ease-in-out;
+}
+
+.testimonial-card.active {
+    display: block;
+    opacity: 1;
+}
+
+.testimonial-card:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+    box-shadow:
+        0px 1px 2.2px rgba(0, 0, 0, 0.011),
+        0px 2.5px 5.3px rgba(0, 0, 0, 0.016),
+        0px 4.6px 10px rgba(0, 0, 0, 0.02),
+        0px 8.3px 17.9px rgba(0, 0, 0, 0.024),
+        0px 15.5px 33.4px rgba(0, 0, 0, 0.029),
+        0px 37px 80px rgba(0, 0, 0, 0.03)
+        ;
+}
+
+.card-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 20px 10px;
+}
+
+.testinomial-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.testmonial-img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+img[alt="testimonial-logo"] {
+    height: 100%;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.testimonial-card h4 {
+    font-size: 1.5rem;
+}
+
+/* Testimonial Slider Styling */
+
+
+
+
+
+
+/* NEWSLETTER STYLING --------------------------------------------- */
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 70px 0px;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 1150px;
+    background: #efefef;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.newsletter-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.1;
+}
+
+.newsletter-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+.newsletter-email-box-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    max-width: 420px;
+    padding: 8px 15px;
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow:
+        0px 1.5px 3.2px -8px rgba(0, 0, 0, 0.031),
+        0px 3.7px 7.6px -8px rgba(0, 0, 0, 0.044),
+        0px 6.9px 14.4px -8px rgba(0, 0, 0, 0.055),
+        0px 12.3px 25.7px -8px rgba(0, 0, 0, 0.066),
+        0px 23px 48px -8px rgba(0, 0, 0, 0.079),
+        0px 55px 115px -8px rgba(0, 0, 0, 0.11);
+}
+
+.email-box .fa-envelope {
+    font-size: 15px;
+    color: #999;
+}
+
+.email-box input {
+    border: 0;
+    padding: 5px;
+    font-size: 15px;
+    color: #666;
+    width: 250px;
+}
+
+.email-box input:focus {
+    cursor: text;
+    outline: 0;
+}
+
+.email-box-submit-btn {
+    background: #6412e9;
+    color: #fff;
+    border: 0;
+    border-radius: 100px;
+    font-size: 14px;
+    padding: 8px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.email-box-submit-btn:hover {
+    cursor: pointer;
+    background-color: #6412e9db;
+    user-select: none;
+}
+
+
+
+
+/* ---------------------------------------------------- */
+/* Stylish Address Section */
+.address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.address h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.address p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------- */
+/* Stylish footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-logo h3 {
+    margin-top: 10px;
+}
+
+.footer-contact,
+.footer-social {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-contact h4,
+.footer-social h4 {
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+/* Responsive styles for close button */
+@media (max-width: 768px) {
+    .close-button {
+        font-size: 42px;
+        top: 10px;
+        right: 20px;
+    }
+
+    .bar {
+        width: 16px;
+        height: 2px;
+    }
+    .menu-text {
+        font-size: 18px;
+    }
+
+
+
+
+
+    /* HERO SLIDER------------------------------------- */
+    .hero-slider {
+        width: 100%;
+        overflow: hidden;
+    }
+    .sliderWrap {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+      
+    .sliderWrap img {
+        /* width: 100%; */
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+
+
+
+
+    .services {
+        padding: 0 20px;
+        margin: 0;
+    }
+    
+
+    .card-container {
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+    /* NEWSLETTER --------------------------------------------- */
+    .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .newsletter-container {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+        padding: 30px 25px 40px 25px;
+        text-align: center;
+    }
+
+    .newsletter-text h3 {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .newsletter-text p {
+        display: none;
+    }
+
+    .newsletter-email-box-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 10px;
+        border-radius: 15px;
+    }
+
+    .email-box {
+        width: 95%;
+    }
+    
+    .email-box input {
+        font-size: 14px;
+    }
+
+    .email-box input:focus {
+        border-bottom: 2px solid #6412e9;
+    }
+    
+    .email-box-submit-btn {
+        width: 95%;
+        margin-top: 10px;
+    }
+
+
+
+
+
+
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer-logo,
+    .footer-contact,
+    .footer-social {
+        flex: 1;
+        padding: 15px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    img[alt="footer-logo"] {
+        width: 50px;
+        background: #fff;
+        border-radius: 10px;
+    }
+}
