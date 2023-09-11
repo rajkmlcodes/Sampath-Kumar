@@ -532,6 +532,12 @@ img[alt="testimonial-logo"] {
     margin-top: 10px;
 }
 
+img[alt="footer-logo"] {
+    width: 50px;
+    background: #fff;
+    border-radius: 10px;
+}
+
 .footer-contact,
 .footer-social {
     flex: 1;
@@ -697,11 +703,5 @@ FI
         padding: 15px;
         margin-bottom: 20px;
         text-align: left;
-    }
-
-    img[alt="footer-logo"] {
-        width: 50px;
-        background: #fff;
-        border-radius: 10px;
     }
 }
